@@ -34,5 +34,5 @@ body:
     attributes:
       label: Código de Conducta
       options:
-        - label: He leído y acepto el [Código de Conducta](https://github.com/KaarLarax/CPC-UAEH-Clases/blob/main/.github/CODE_OF_CONDUCT.md).
+        - label: He leído y acepto el [Código de Conducta](https://github.com/CPC-UAEH/CPC-UAEH-Clases/blob/main/.github/CODE_OF_CONDUCT.md).
           required: true
