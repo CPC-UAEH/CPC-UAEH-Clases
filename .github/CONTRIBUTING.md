@@ -17,7 +17,7 @@ o cambios que no estén relacionados con el propósito educativo del repositorio
 
 ## Antes de comenzar
 
-1. Busca [issues y Pull Requests abiertos](https://github.com/CPC-UAEH/CPC-UAEH-Clases/issues) para evitar duplicar trabajo.
+1. Busca [issues y Pull Requests abiertos](https://github.com/CPC-UAEH/Clases/issues) para evitar duplicar trabajo.
 2. Para cambios grandes, abre un issue y explica la propuesta antes de implementarla.
 3. Revisa el [README principal](../readme.md) y las plantillas en `template/`.
 

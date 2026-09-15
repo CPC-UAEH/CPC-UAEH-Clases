@@ -7,9 +7,9 @@
 
   <p>
     <a href="https://cpcjudge.com/"><img src="https://img.shields.io/badge/CPC%20Judge-practica-111827?style=for-the-badge" alt="CPC Judge"></a>
-    <a href="https://github.com/CPC-UAEH/CPC-UAEH-Clases"><img src="https://img.shields.io/github/last-commit/CPC-UAEH/CPC-UAEH-Clases?style=for-the-badge&label=actualizado" alt="Última actualización"></a>
-    <a href="https://github.com/CPC-UAEH/CPC-UAEH-Clases/issues"><img src="https://img.shields.io/github/issues/CPC-UAEH/CPC-UAEH-Clases?style=for-the-badge&label=issues" alt="Issues abiertas"></a>
-    <a href="https://github.com/CPC-UAEH/CPC-UAEH-Clases/graphs/contributors"><img src="https://img.shields.io/github/contributors/CPC-UAEH/CPC-UAEH-Clases?style=for-the-badge&label=contribuidores" alt="Contribuidores"></a>
+    <a href="https://github.com/CPC-UAEH/Clases"><img src="https://img.shields.io/github/last-commit/CPC-UAEH/Clases?style=for-the-badge&label=actualizado" alt="Última actualización"></a>
+    <a href="https://github.com/CPC-UAEH/Clases/issues"><img src="https://img.shields.io/github/issues/CPC-UAEH/Clases?style=for-the-badge&label=issues" alt="Issues abiertas"></a>
+    <a href="https://github.com/CPC-UAEH/Clases/graphs/contributors"><img src="https://img.shields.io/github/contributors/CPC-UAEH/Clases?style=for-the-badge&label=contribuidores" alt="Contribuidores"></a>
   </p>
 
   <p>
@@ -106,7 +106,7 @@ Consulta las [reglas para contribuir](./.github/CONTRIBUTING.md) y el
 
 ### Flujo recomendado
 
-1. Revisa los [issues abiertos](https://github.com/CPC-UAEH/CPC-UAEH-Clases/issues) o crea uno nuevo.
+1. Revisa los [issues abiertos](https://github.com/CPC-UAEH/Clases/issues) o crea uno nuevo.
 2. Haz un fork del repositorio y crea una rama descriptiva.
 3. Realiza tus cambios y usa commits claros, por ejemplo:
 
@@ -133,12 +133,12 @@ Este proyecto es mantenido de forma colaborativa por **KaarLarax**, el [Club de 
 Gracias a todas las personas que ayudan a mejorar este material.
 
 <div align="center">
-  <a href="https://github.com/CPC-UAEH/CPC-UAEH-Clases/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=CPC-UAEH/CPC-UAEH-Clases" alt="Contribuidores del repositorio">
+  <a href="https://github.com/CPC-UAEH/Clases/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=CPC-UAEH/Clases" alt="Contribuidores del repositorio">
   </a>
 </div>
 
-La imagen se actualiza automáticamente con los contribuidores registrados en GitHub. También puedes consultar la [lista completa de contribuidores](https://github.com/CPC-UAEH/CPC-UAEH-Clases/graphs/contributors).
+La imagen se actualiza automáticamente con los contribuidores registrados en GitHub. También puedes consultar la [lista completa de contribuidores](https://github.com/CPC-UAEH/Clases/graphs/contributors).
 
 ## Licencia
 

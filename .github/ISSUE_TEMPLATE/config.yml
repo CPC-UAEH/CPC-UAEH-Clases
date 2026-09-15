@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Reglas para contribuir
-    url: https://github.com/CPC-UAEH/CPC-UAEH-Clases/blob/main/.github/CONTRIBUTING.md
+    url: https://github.com/CPC-UAEH/Clases/blob/main/.github/CONTRIBUTING.md
     about: Consulta el flujo y las convenciones antes de abrir un issue.
   - name: Código de Conducta
-    url: https://github.com/CPC-UAEH/CPC-UAEH-Clases/blob/main/.github/CODE_OF_CONDUCT.md
+    url: https://github.com/CPC-UAEH/Clases/blob/main/.github/CODE_OF_CONDUCT.md
     about: Lee las normas de convivencia de la comunidad.

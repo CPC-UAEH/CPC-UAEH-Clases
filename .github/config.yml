@@ -2,8 +2,8 @@
 
 # Configuration for new-issue-welcome - https://github.com/behaviorbot/new-issue-welcome
 newIssueWelcomeComment: >
-  Gracias por abrir este issue para las Clases del Club de Programación Competitiva de la UAEH. Una persona mantenedora lo revisará pronto. Mientras tanto, consulta las [reglas para contribuir](https://github.com/CPC-UAEH/CPC-UAEH-Clases/blob/main/.github/CONTRIBUTING.md) y el [código de conducta](https://github.com/CPC-UAEH/CPC-UAEH-Clases/blob/main/.github/CODE_OF_CONDUCT.md).
+  Gracias por abrir este issue para las Clases del Club de Programación Competitiva de la UAEH. Una persona mantenedora lo revisará pronto. Mientras tanto, consulta las [reglas para contribuir](https://github.com/CPC-UAEH/Clases/blob/main/.github/CONTRIBUTING.md) y el [código de conducta](https://github.com/CPC-UAEH/Clases/blob/main/.github/CODE_OF_CONDUCT.md).
 
 # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
 newPRWelcomeComment: >
-  Gracias por tu primera Pull Request para las Clases del Club de Programación Competitiva de la UAEH. Revisaremos tus cambios pronto. Consulta las [reglas para contribuir](https://github.com/CPC-UAEH/CPC-UAEH-Clases/blob/main/.github/CONTRIBUTING.md) y verifica la lista de comprobación de la Pull Request.
+  Gracias por tu primera Pull Request para las Clases del Club de Programación Competitiva de la UAEH. Revisaremos tus cambios pronto. Consulta las [reglas para contribuir](https://github.com/CPC-UAEH/Clases/blob/main/.github/CONTRIBUTING.md) y verifica la lista de comprobación de la Pull Request.
