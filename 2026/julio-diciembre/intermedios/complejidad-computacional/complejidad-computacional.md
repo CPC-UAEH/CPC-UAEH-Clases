@@ -24,7 +24,7 @@ cout << suma;       // O(1) - Imprimir un número simple toma un tiempo fijo
 
 ```
 
-**Conclusión:** Todo el bloque de código se ejecuta en tiempo $O(1)$. 
+**Conclusión:** Todo el bloque de código se ejecuta en tiempo $O(1)$.
 
 No importa si sumamos `5 + 10` o `1000000 + 2000000`, la computadora tardará lo mismo.
 
@@ -32,7 +32,7 @@ No importa si sumamos `5 + 10` o `1000000 + 2000000`, la computadora tardará lo
 
 ## 2. Complejidad Temporal (Big O)
 
-Para calcular la complejidad total de un programa, sumamos la complejidad de sus partes, pero **solo nos quedamos con el término dominante** (el "peor de los casos"). 
+Para calcular la complejidad total de un programa, sumamos la complejidad de sus partes, pero **solo nos quedamos con el término dominante** (el "peor de los casos").
 
 Si un algoritmo tiene una parte $O(n)$ y otra $O(n^2)$, la complejidad final es $O(n^2)$.
 
@@ -52,7 +52,6 @@ for (int i = 0; i < n; i++) {       // O(n) - Ciclo se ejecuta n veces
 
 El tiempo de ejecución crece linealmente. Si $n$ se duplica, el tiempo de ejecución se duplica.
 
-
 ### B. Ciclos Anidados: $O(n^2)$
 
 ```cpp
@@ -67,8 +66,7 @@ for (int i = 0; i < n; i++) {            // O(n) - Bloque externo itera n veces
 
 **Conclusión:** Todo el bloque de código se ejecuta en tiempo **$O(n^2)$**.
 
-
-> _Nota importante:_ ¿Es $O(n^2)$ una complejidad mala? **Depende del tamaño de la entrada ($n$).** 
+> _Nota importante:_ ¿Es $O(n^2)$ una complejidad mala? **Depende del tamaño de la entrada ($n$).**
 
 En programación competitiva, los jueces suelen procesar unas $10^8$ operaciones por segundo. Si $n = 1000$, entonces $n^2 = 1,000,000$ (esto pasará rapidísimo). Pero si $n = 10^5$, $n^2 = 10^{10}$ operaciones, lo que tomará muchos segundos y resultará en un **Time Limit Exceeded (TLE)**.
 
@@ -90,7 +88,7 @@ for(int i = 1; i <= n; i++) {       // O(n) - Ciclo itera n veces
 
 ```
 
-El bloque de código tiene **complejidad $O(n)$**. 
+El bloque de código tiene **complejidad $O(n)$**.
 
 Pero, ¿qué pasa si el problema establece un valor para $N = 10^{10}$? el ciclo iterará diez mil millones de veces, superando el límite de un segundo del juez; el algoritmo producirá un **TLE**.
 
@@ -106,7 +104,7 @@ Se dio cuenta de que si emparejaba los números de los extremos opuestos de la s
 - $2 + 99 = 101$
 - $3 + 98 = 101$
 
-Nótese que los extremos siempre suman 101 = $(n + 1)$, y como estamos emparejando números, tenemos exactamente 50 = $\frac{n}{2}$ pares. 
+Nótese que los extremos siempre suman 101 = $(n + 1)$, y como estamos emparejando números, tenemos exactamente 50 = $\frac{n}{2}$ pares.
 
 De aquí se deduce la fórmula general, mágica, para sumar los primeros $n$ números naturales consecutivos:
 
@@ -117,14 +115,13 @@ long long suma = ( n * ( n + 1 ) ) / 2;     // O(1) - Una sola operación matem�
 
 ```
 
-
 **¡Felicidades!** acabas de reducir un algoritmo que daba TLE con complejidad $O(n)$, a un algoritmo con **complejidad $O(1)$**.
 
 ---
 
 ## 4. Complejidad Espacial (Memoria)
 
-Hemos analizamos cuánto tiempo toma un algoritmo, pero también debemos saber **cuánta memoria consume**. 
+Hemos analizamos cuánto tiempo toma un algoritmo, pero también debemos saber **cuánta memoria consume**.
 
 Los ejemplos anteriores solo declaran variables simples (`int`, `long long`), por lo que su complejidad espacial es **$O(1)$**.
 
