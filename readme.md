@@ -37,14 +37,19 @@ El material se organiza por año, periodo académico, nivel y tema.
 ├── 2026
 │   └── julio-diciembre
 │       └── intermedios
-│           └── complejidad-computacional
-│               ├── complejidad-computacional.md
+│           ├── complejidad-computacional
+│           │   ├── complejidad-computacional.md
+│           │   └── editoriales
+│           │       ├── editorial.md
+│           │       ├── gauss-suma.md
+│           │       ├── again-twenty-five.md
+│           │       ├── posada-liborio.md
+│           │       └── abbb.md
+│           └── operadores-bits
+│               ├── operadores-bits.md
 │               └── editoriales
 │                   ├── editorial.md
-│                   ├── gauss-suma.md
-│                   ├── again-twenty-five.md
-│                   ├── posada-liborio.md
-│                   └── abbb.md
+│                   └── problema.md
 ├── template
 │   ├── README.md
 │   └── periodo-academico
@@ -64,6 +69,8 @@ Para crear material de un nuevo periodo, consulta la [plantilla de clases](./tem
 
 - [Complejidad computacional](./2026/julio-diciembre/intermedios/complejidad-computacional/complejidad-computacional.md)
   - [Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/complejidad-computacional/editoriales/editorial.md)
+- [Operadores bit a bit](./2026/julio-diciembre/intermedios/operadores-bits/operadores-bits.md)
+  - [Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/operadores-bits/editoriales/editorial.md)
 
 ## Cómo aprender con este material
 
@@ -80,7 +87,7 @@ Para practicar los problemas, visita [CPC Judge](https://cpcjudge.com/).
 ## Roadmap de intermedios
 
 - [x] Complejidad computacional
-- [ ] Operadores bit a bit
+- [x] Operadores bit a bit
 - [ ] Recursividad
 - [ ] Divisores
 - [ ] GCD y LCM
