@@ -6,7 +6,7 @@ Los operadores bit a bit o _bitwise operators_ son operadores integrados en la m
 
 Antes de comenzar entenderemos algo: todo lo que existe dentro de una computadora se almacena en bits, simples 1's y 0's. En el lenguaje de programación C++, existen operadores que los manipulan directamente. Un número entero en C++ lo podemos representar de la siguiente manera:
 
-```
+```text
 S = 34 (base 10) = 100010 (base 2)
 ```
 
@@ -20,7 +20,7 @@ A continuación aprenderemos las operaciones fundamentales de manipulación de b
 
 Un entero con signo de 32 (o 64) bits nos sirve para representar hasta 32 (o 64) elementos. Sin perder el ámbito generalista, todos los ejemplos mostrados a continuación utilizan un entero con signo de 32 bits, llamado $S$.
 
-```
+```text
   5|  4|  3|  2|  1|  0  <- índice (0 desde la derecha)
  32| 16|  8|  4|  2|  1  <- potencia de 2
   F|  E|  D|  C|  B|  A  <- etiqueta alfabética alternativa
@@ -66,7 +66,7 @@ S |= (1 << j);          // Operación OR: cierto si cualquiera de los bits lo es
 
 Visualización:
 
-```
+```text
   S      = 100010   (34 en decimal)
   1 << 3 = 001000   (8 en decimal)
   ----------------
@@ -101,7 +101,7 @@ T = S & (1 << j);       // 1 << 2 = 000100
 
 Visualización:
 
-```
+```text
   S      = 101010   (42)        S      = 101010   (42)
   1 << 3 = 001000   (8)        1 << 2 = 000100    (4)
   ----------------            ----------------
@@ -126,7 +126,7 @@ S &= ~(1 << j);         // Operación AND con la máscara invertida
 
 Visualización:
 
-```
+```text
   S        = 101010   (42)
   1 << 1   = 000010   (2)
   ~(1<<1)  = 111101   (invierte todos los bits)
@@ -162,7 +162,7 @@ S ^= (1 << j);          // XOR: cierto si ambos bits son DIFERENTES
 
 Visualización:
 
-```
+```text
   S      = 101000   (40)        S      = 101000   (40)
   1 << 2 = 000100   (4)        1 << 3 = 001000    (8)
   ----------------            ----------------
@@ -187,7 +187,7 @@ int T = (S & (-S));     // Operación AND
 
 Visualización:
 
-```
+```text
   S  = 000...000101000   (40)
   -S = 111...111011000   (-40 en complemento a dos)
   ----------------------
@@ -312,9 +312,9 @@ Si $x = A$, entonces $A \oplus B \oplus A = B$. Si $x = B$, entonces $A \oplus B
 Estas identidades son útiles cuando un problema proporciona el XOR o el AND de dos números y necesitas deducir la suma u otros valores.
 
 | Identidad | Fórmula |
-|-----------|---------|
+| --------- | --------- |
 | Suma vía XOR y AND | $A + B = (A \oplus B) + 2 \times (A \ \& \ B)$ |
-| Suma vía OR y AND  | $A + B = (A \ | \ B) + (A \ \& \ B)$ |
+| Suma vía OR y AND | $A + B = (A \| B) + (A \ \& \ B)$ |
 
 **Paridad de bits encendidos en XOR:**
 
@@ -332,7 +332,7 @@ Esto se debe a que el XOR no cambia la paridad total de bits encendidos entre am
 ## Resumen de Operaciones
 
 | Operación | Fórmula | Descripción |
-|-----------|---------|-------------|
+| --------- | --------- | --------- |
 | Activar bit $j$ | `S \|= (1 << j)` | Pone a 1 el bit $j$-ésimo |
 | Comprobar bit $j$ | `T = S & (1 << j)` | Verifica si el bit $j$-ésimo es 1 |
 | Desactivar bit $j$ | `S &= ~(1 << j)` | Pone a 0 el bit $j$-ésimo |

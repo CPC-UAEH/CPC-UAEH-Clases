@@ -49,7 +49,10 @@ El material se organiza por año, periodo académico, nivel y tema.
 │               ├── operadores-bits.md
 │               └── editoriales
 │                   ├── editorial.md
-│                   └── problema.md
+│                   ├── crianza-de-bacterias.md
+│                   ├── cadenas-de-bits.md
+│                   ├── mochila-knapsack.md
+│                   └── inspirado-en-tailandia.md
 ├── template
 │   ├── README.md
 │   └── periodo-academico
