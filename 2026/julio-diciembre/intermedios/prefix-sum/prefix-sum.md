@@ -1,8 +1,6 @@
 # Prefix-Sum
 
-
 **Autor:** Nicole Abigail Chow-Flores - Nikkacf24
-
 
 ## 1. El problema
 
@@ -16,6 +14,7 @@ Ejemplo:
 vector<long long> a = {0, 2, 4, 1, 6, 3, 8, 5};
 // Ejemplo de una query: suma entre l=3 y r=6
 ```
+
 Un detalle importante a recordar para despues es que: **el vector no cambia**. Lo unico que cambia entre cada query, son los valores de `l` y `r`.
 
 ---
@@ -23,28 +22,29 @@ Un detalle importante a recordar para despues es que: **el vector no cambia**. L
 ### El enfoque ingenuo: recorrer cada vez
 
 Lo primero que se nos ocurre a todos es, para cada consulta, recorrer el vector desde `l` hasta `r` y sumar uno por uno.
-``` cpp
+
+```cpp
 vector<long long> a = {0, 2, 4, 1, 6, 3, 8, 5};     //arreglo original indexado en 1
 int q = 5;                                          //# de queries
 
-while(q--) {                                       
+while(q--) {
     int l, r;                                       //índices
-    cin >> l >> r; 
+    cin >> l >> r;
     long long suma = 0;                             //variable acumuladora - long long para que no se desborde
     for(int i = l; i <= r; i++){
         suma += a[i];                               //acumular cada elemento del arreglo a dentro del rango
     }
     cout << suma << "\n";
-} 
-
+}
 ```
-**¿Por qué es lento?** En el peor caso, cada query cuesta $O(n)$, porque podrían pedirnos la suma de todo el vector y, por lo tanto, tendríamos que recorrer todos sus elementos. 
 
-Si tenemos $q$ queries el costo total sería $O(n * q)$ ya que por cada query, debemos recorrer todo el arreglo. 
+**¿Por qué es lento?** En el peor caso, cada query cuesta $O(n)$, porque podrían pedirnos la suma de todo el vector y, por lo tanto, tendríamos que recorrer todos sus elementos.
+
+Si tenemos $q$ queries el costo total sería $O(n * q)$ ya que por cada query, debemos recorrer todo el arreglo.
 
 Con $n = 10^5$ y $q = 10^5$, resulta en $10^{10}$ operaciones, lo que provocaría un **TLE** (Time Limit Exceeded).
 
-La pista para optimizar está en el propio problema: si el vector no cambia, y estamos recalculando lo mismo una y otra vez, **la solución es calcularlo una sola vez y reutilizarlo**. 
+La pista para optimizar está en el propio problema: si el vector no cambia, y estamos recalculando lo mismo una y otra vez, **la solución es calcularlo una sola vez y reutilizarlo**.
 
 ---
 
@@ -71,7 +71,9 @@ $$prefix[i] = a[1] + a[2] + . . . + a[i]$$
 
 Para lograr esto, la idea es seguir una regla:
 
-    El valor actual es igual a la suma que llevamos acumulada + el elemento actual.
+```text
+El valor actual es igual a la suma que llevamos acumulada + el elemento actual.
+```
 
 La fórmula es:
 
@@ -84,38 +86,41 @@ for (int i = 1; i <= n; i++) {              // se recorre todo el vector
     prefix[i] = prefix[i - 1] + a[i];       //prefix[i] = el total anterior + el elemento actual
 }
 ```
+
 El ciclo recorre el vector una sola vez, por lo que construir prefix tiene una complejidad de $O(n)$.
 
 La operación que realizamos dentro del ciclo es una suma entre dos valores, por lo que cuesta $O(1)$.
 
 ### Paso a Paso
-Tenemos: 
 
-`vector<long long> a = {0, 2, 4, 1, 6, 3, 8, 5};    `  
+Tenemos:
+
+`vector<long long> a = {0, 2, 4, 1, 6, 3, 8, 5};`
 
 Inicialmente:
-    $prefix[0] = 0$
+$prefix[0] = 0$
+
 - Índice 1: Sumamos lo acumulado anteriormente (0) + el nuevo elemento (2).
-    - prefix[1] = prefix[1 - 1] + a[1] = prefix[0] + a[1] = 0 + 2 = 2
-    = prefix[1] = 2
+  - prefix[1] = prefix[1 - 1] + a[1] = prefix[0] + a[1] = 0 + 2 = 2
+  - prefix[1] = 2
 - Índice 2: Sumamos lo acumulado anteriormente (2) + el nuevo elemento (4).
-    - prefix[2] = prefix[2 - 1] + a[2] = prefix[1] + a[2] = 2 + 4 = 6
-    - prefix[2] = 6
+  - prefix[2] = prefix[2 - 1] + a[2] = prefix[1] + a[2] = 2 + 4 = 6
+  - prefix[2] = 6
 - Índice 3: Sumamos lo acumulado anteriormente (6) + el nuevo elemento (1).
-    - prefix[3] = prefix[3 - 1] + a[3] = prefix[2] + a[3] = 6 + 1 = 7
-    - prefix[3] = 7
+  - prefix[3] = prefix[3 - 1] + a[3] = prefix[2] + a[3] = 6 + 1 = 7
+  - prefix[3] = 7
 - Índice 4: Sumamos lo acumulado anteriormente (7) + el nuevo elemento (6).
-    - prefix[4] = prefix[4 - 1] + a[4] = prefix[3] + a[4] = 7 + 6 = 13
-    - prefix[4] = 13
+  - prefix[4] = prefix[4 - 1] + a[4] = prefix[3] + a[4] = 7 + 6 = 13
+  - prefix[4] = 13
 - Índice 5: Sumamos lo acumulado anteriormente (13) + el nuevo elemento (3).
-    - prefix[5] = prefix[5 - 1] + a[5] = prefix[4] + a[5] = 13 + 3 = 16
-    - prefix[5] = 16
+  - prefix[5] = prefix[5 - 1] + a[5] = prefix[4] + a[5] = 13 + 3 = 16
+  - prefix[5] = 16
 - Índice 6: Sumamos lo acumulado anteriormente (16) + el nuevo elemento (8).
-    - prefix[6] = prefix[6 - 1] + a[6] = prefix[5] + a[6] = 16 + 8 = 24
-    - prefix[6] = 24
+  - prefix[6] = prefix[6 - 1] + a[6] = prefix[5] + a[6] = 16 + 8 = 24
+  - prefix[6] = 24
 - Índice 7: Sumamos lo acumulado anteriormente (24) + el nuevo elemento (5).
-    - prefix[7] = prefix[7 - 1] + a[7] = prefix[6] + a[7] = 24 + 5 = 29
-    - prefix[7] = 29
+  - prefix[7] = prefix[7 - 1] + a[7] = prefix[6] + a[7] = 24 + 5 = 29
+  - prefix[7] = 29
 
 Con nuestro ejemplo, `prefix` queda así:
 
@@ -124,8 +129,7 @@ Con nuestro ejemplo, `prefix` queda así:
 | a\[i\] | – | 2 | 4 | 1 | 6 | 3 | 8 | 5 |
 | prefix\[i\] | 0 | 2 | 6 | 7 | 13 | 16 | 24 | 29 |
 
-
-Podemos verificar que en cada índice $i$ del arreglo `prefix`, el valor representa la suma de los elementos desde $a[1]$ hasta $a[i]$. 
+Podemos verificar que en cada índice $i$ del arreglo `prefix`, el valor representa la suma de los elementos desde $a[1]$ hasta $a[i]$.
 
 Por ejemplo: `prefix[4] = 13` significa que:
 
@@ -133,13 +137,14 @@ $$prefix[4] = a[1] + a[2] + a[3] + a[4] = 2 + 4 + 1 + 6 = 13$$
 
 Aquí es donde es importante la indexación en 1 en vez de 0. Al aplicar la fórmula prefix[i] = prefix[i - 1] + a[i], si i = 1, entonces i - 1 = 0, que es un índice válido en nuestro vector.
 
-Si estuviera indexado en 0 y i = 0, entonces i - 1 = -1, que no es un índice válido en nuestro vector y nos daría un error. 
+Si estuviera indexado en 0 y i = 0, entonces i - 1 = -1, que no es un índice válido en nuestro vector y nos daría un error.
 
 > Nota: Si se puede indexar en 0, pero debes adaptar tu código a ello, por temas de facilidad, explicamos con indexación en 1.
 
 ---
 
 ## 4. ¿Qué estamos logrando con Prefix Sum?
+
 Hasta este punto, todavía no hemos respondido ninguna consulta.
 
 Lo que hicimos fue preprocesar el vector.
@@ -149,23 +154,27 @@ En lugar de guardar solamente los valores originales, construimos otro vector qu
 ---
 
 ## 5. Consultas
+
 Ahora que ya tenemos construido nuestro vector prefix, podemos usarlo para responder las consultas sin tener que recorrer nuevamente todos los elementos entre l y r.
 
 Supongamos que queremos responder la siguiente query:
 
-    ¿Cuál es la suma de los elementos desde l = 3 hasta r = 6?
+```text
+¿Cuál es la suma de los elementos desde l = 3 hasta r = 6?
+```
 
 Es decir, queremos calcular:
 $$a[3] + a[4] + a[5] + a[6]$$
 
 Suponiendo que:
 
-    a = {0, 2, 4, 1, 6, 3, 8, 5}
+```text
+a = {0, 2, 4, 1, 6, 3, 8, 5}
+```
 
 Esto es igual a 1 + 6 + 3 + 8 = 18. Podemos obtener este resultado utilizando los valores que ya calculamos en prefix.
 
 > Recordemos que `prefix[i]` contiene la suma de todos los elementos desde `a[1]` hasta `a[i]`.
-
 
 `prefix = {0, 2, 6, 7, 13, 16, 24, 29}`
 
@@ -197,7 +206,7 @@ Al restar `prefix[l-1]`, eliminamos todos los elementos anteriores a `l`.
 
 ## 6. Código en C++
 
-``` cpp
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -206,7 +215,7 @@ int main() {
     int n, q; cin >> n >> q;
     vector<long long> a(n + 1);
     for (int i = 1; i <= n; i++) cin >> a[i];        // O(n) - leer la entrada
-    
+
     vector<long long> prefix(n + 1, 0);
     for (int i = 1; i <= n; i++) {                    // O(n) - construir el vector de prefijos, una sola vez
         prefix[i] = prefix[i - 1] + a[i];
@@ -221,9 +230,11 @@ int main() {
     return 0;
 }
 ```
+
 ---
 
 ## 7. Complejidad
+
 | Enfoque | Preprocesamiento | Por consulta | Total con $q$ consultas |
 | --- | --- | --- | --- |
 | Ingenuo | $O(1)$ | $O(n)$ | $O(n * q)$ |
@@ -295,15 +306,11 @@ $$prefix[r] - prefix[l-1]$$
 
 No:
 
-$$
-prefix[r] - prefix[l]
-$$
+$$prefix[r] - prefix[l]$$
 
 Por ejemplo, si queremos calcular la suma entre `l = 3` y `r = 6`:
 
-$$
-prefix[6] - prefix[2]
-$$
+$$prefix[6] - prefix[2]$$
 
 Esto nos da:
 
@@ -336,15 +343,11 @@ Por ejemplo:
 
 Por ejemplo:
 
-$$
-a[4] = 6
-$$
+$$a[4] = 6$$
 
 pero:
 
-$$
-prefix[4] = 13
-$$
+$$prefix[4] = 13$$
 
 No representan lo mismo.
 
@@ -354,9 +357,9 @@ No representan lo mismo.
 
 Siempre hay que mantener consistencia entre:
 
-* la forma en que almacenamos los datos;
-* la forma en que construimos `prefix`;
-* la forma en que respondemos las consultas.
+- la forma en que almacenamos los datos;
+- la forma en que construimos `prefix`;
+- la forma en que respondemos las consultas.
 
 ---
 
