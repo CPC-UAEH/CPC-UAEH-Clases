@@ -28,42 +28,6 @@ El objetivo es construir una colección de material técnico en español que aco
 
 > **Recomendación:** intenta resolver cada problema antes de consultar su editorial.
 
-## Contenido
-
-El material se organiza por año, periodo académico, nivel y tema.
-
-```text
-.
-├── 2026
-│   └── julio-diciembre
-│       └── intermedios
-│           ├── complejidad-computacional
-│           │   ├── complejidad-computacional.md
-│           │   └── editoriales
-│           │       ├── editorial.md
-│           │       ├── gauss-suma.md
-│           │       ├── again-twenty-five.md
-│           │       ├── posada-liborio.md
-│           │       └── abbb.md
-│           └── operadores-bits
-│               ├── operadores-bits.md
-│               └── editoriales
-│                   ├── editorial.md
-│                   ├── crianza-de-bacterias.md
-│                   ├── cadenas-de-bits.md
-│                   ├── mochila-knapsack.md
-│                   └── inspirado-en-tailandia.md
-├── template
-│   ├── README.md
-│   └── periodo-academico
-│       └── nivel
-│           └── tema
-│               ├── tema.md
-│               └── editoriales
-│                   └── problema.md
-└── readme.md
-```
-
 Para crear material de un nuevo periodo, consulta la [plantilla de clases](./template/README.md).
 
 ### 2026 · Julio–Diciembre
@@ -74,6 +38,10 @@ Para crear material de un nuevo periodo, consulta la [plantilla de clases](./tem
   - [Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/complejidad-computacional/editoriales/editorial.md)
 - [Operadores bit a bit](./2026/julio-diciembre/intermedios/operadores-bits/operadores-bits.md)
   - [Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/operadores-bits/editoriales/editorial.md)
+- [Prefix Sum](./2026/julio-diciembre/intermedios/prefix-sum/prefix-sum.md)
+  -[Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/prefix-sum/editoriales/editorial.md)
+- [Recursividad](./2026/julio-diciembre/intermedios/recursividad/recursividad.md)
+  - [Editoriales de problemas](./2026/julio-diciembre/intermedios/recursividad/editoriales/editorial.md)
 
 ## Cómo aprender con este material
 
@@ -91,10 +59,10 @@ Para practicar los problemas, visita [CPC Judge](https://cpcjudge.com/).
 
 - [x] Complejidad computacional
 - [x] Operadores bit a bit
-- [ ] Recursividad
+- [x] Prefix Sum
+- [x] Recursividad
 - [ ] Divisores
 - [ ] GCD y LCM
-- [ ] Prefix Sum
 - [ ] STL de C++
 - [ ] Ordenamientos
 - [ ] Divide y vencerás / Merge Sort
