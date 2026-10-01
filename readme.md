@@ -39,7 +39,7 @@ Para crear material de un nuevo periodo, consulta la [plantilla de clases](./tem
 - [Operadores bit a bit](./2026/julio-diciembre/intermedios/operadores-bits/operadores-bits.md)
   - [Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/operadores-bits/editoriales/editorial.md)
 - [Prefix Sum](./2026/julio-diciembre/intermedios/prefix-sum/prefix-sum.md)
-  -[Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/prefix-sum/editoriales/editorial.md)
+  - [Editoriales de problemas resaltados](./2026/julio-diciembre/intermedios/prefix-sum/editoriales/editorial.md)
 - [Recursividad](./2026/julio-diciembre/intermedios/recursividad/recursividad.md)
   - [Editoriales de problemas](./2026/julio-diciembre/intermedios/recursividad/editoriales/editorial.md)
 
